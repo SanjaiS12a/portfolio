@@ -5,28 +5,28 @@ function Projects() {
     {
       title: "Water Consumption Prediction",
       description: "ML and deep learning framework forecasting daily water demand with MLP, GRU, and LSTM models, plus a Streamlit dashboard for interactive scenario planning.",
-      image: "/energy_chart.png",
+      image: "\water.png",
       tag: "AI / ML",
       link: "https://github.com/SanjaiS12a/waterconsumptionprediction"
     },
     {
       title: "NeetCode Submissions",
       description: "Curated collection of NeetCode.io problem solutions synced via GitHub, organized by topic with solutions in Java and other languages.",
-      image: "/planet.png",
+      image: "/neet.png",
       tag: "DSA / Java",
       link: "https://github.com/SanjaiS12a/neetcode-submissions"
     },
     {
       title: "Developer Portfolio",
       description: "Interactive React portfolio showcasing projects, skills, and achievements with a cyber-themed UI, terminal interface, and GitHub stats.",
-      image: "/galaxy.png",
+      image: "\port.png",
       tag: "WEB APP",
       link: "https://github.com/SanjaiS12a/portfolio"
     },
     {
       title: "Real-Time Chat Queue in C",
       description: "Developed a real-time chat queue system in C to manage customer requests efficiently with dynamic assignment, logging, and queue management.",
-      image: "/black_hole.png",
+      image: "\c.png",
       tag: "C Programming",
       link: "#"
     }
