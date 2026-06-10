@@ -16,7 +16,7 @@ function Terminal() {
     about: "SANJAI S - Artificial Intelligence and Machine Learning Student. Passionate about LLMs, data telemetry, and system-level applications.",
     education: "1. B.Tech AI & ML @ Kongu Engineering College (7.75 CGPA) | 2. HSC @ Vidya Mandir (75%) | 3. SSLC @ Vidya Mandir",
     skills: "Core technical capabilities: Python, C Programming, JavaScript, MongoDB, HTML & CSS, Git & GitHub.",
-    projects: "1. Personalized Healthcare using LLM (AI/ML) | 2. Real-Time Chat Queue in C (Systems & C Code)"
+    projects: "1. Water Consumption Prediction (AI/ML) | 2. NeetCode Submissions (DSA/Java) | 3. Developer Portfolio (React) | 4. Real-Time Chat Queue in C (Systems & C Code)"
   };
 
   const handleCommand = (e) => {

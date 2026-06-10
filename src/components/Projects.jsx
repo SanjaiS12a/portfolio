@@ -3,31 +3,31 @@ import { ArrowUpRight } from "lucide-react";
 function Projects() {
   const projectList = [
     {
-      title: "Personalized Healthcare using LLM",
-      description: "Developed an AI-powered personalized healthcare system to analyze patient data, predict potential health risks, and provide tailored health recommendations.",
+      title: "Water Consumption Prediction",
+      description: "ML and deep learning framework forecasting daily water demand with MLP, GRU, and LSTM models, plus a Streamlit dashboard for interactive scenario planning.",
       image: "/energy_chart.png",
       tag: "AI / ML",
-      link: "#"
+      link: "https://github.com/SanjaiS12a/waterconsumptionprediction"
+    },
+    {
+      title: "NeetCode Submissions",
+      description: "Curated collection of NeetCode.io problem solutions synced via GitHub, organized by topic with solutions in Java and other languages.",
+      image: "/planet.png",
+      tag: "DSA / Java",
+      link: "https://github.com/SanjaiS12a/neetcode-submissions"
+    },
+    {
+      title: "Developer Portfolio",
+      description: "Interactive React portfolio showcasing projects, skills, and achievements with a cyber-themed UI, terminal interface, and GitHub stats.",
+      image: "/galaxy.png",
+      tag: "WEB APP",
+      link: "https://github.com/SanjaiS12a/portfolio"
     },
     {
       title: "Real-Time Chat Queue in C",
       description: "Developed a real-time chat queue system in C to manage customer requests efficiently with dynamic assignment, logging, and queue management.",
       image: "/black_hole.png",
       tag: "C Programming",
-      link: "#"
-    },
-    {
-      title: "Black Hole Quiz Platform",
-      description: "Interactive web quiz application about black holes featuring real-time grading, space trivia, and detailed explanations.",
-      image: "/galaxy.png",
-      tag: "WEB APP",
-      link: "#"
-    },
-    {
-      title: "Galaxy Quiz Platform",
-      description: "Test celestial knowledge on galaxies with dynamic quiz questions, instant grading, and cosmic telemetry visualizations.",
-      image: "/planet.png",
-      tag: "WEB APP",
       link: "#"
     }
   ];
@@ -94,6 +94,8 @@ function Projects() {
                   
                   <a
                     href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
                     className="w-8 h-8 rounded-lg bg-cyber-red/10 border border-cyber-red/35 flex items-center justify-center text-cyber-red group-hover:bg-cyber-red group-hover:text-white transition-all duration-300"
                   >
                     <ArrowUpRight size={15} />
