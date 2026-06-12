@@ -1,12 +1,11 @@
 import { useEffect, useState, useRef } from "react";
 import Typed from "typed.js";
 import { FaGithub, FaLinkedin, FaEnvelope, FaChevronRight } from "react-icons/fa";
-import { Activity, Database, Cpu, TrendingUp, Sparkles, ShieldCheck } from "lucide-react";
-import { FaGithub, FaLinkedin, FaEnvelope, FaChevronRight } from "react-icons/fa";
-import { Activity, Database, Cpu, TrendingUp, Sparkles, ShieldCheck } from "lucide-react";
+import { Activity, Database, Cpu } from "lucide-react";
 
 function Hero() {
   const typedRef = useRef(null);
+  
   useEffect(() => {
     const options = {
       strings: ["AI Engineer", "ML Developer", "Data Analyst", "Full Stack Developer"],
@@ -86,7 +85,9 @@ function Hero() {
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white mb-2">
                 SANJAI S
               </h1>
-              <h2 className="text-2xl md:text-4xl font-extrabold text-cyber-red tracking-wide text-glow-red"><span ref={typedRef}></span></h2>
+              <h2 className="text-2xl md:text-4xl font-extrabold text-cyber-red tracking-wide text-glow-red">
+                <span ref={typedRef}></span>
+              </h2>
             </div>
 
             {/* Description */}
@@ -126,7 +127,7 @@ function Hero() {
           </div>
 
           {/* RIGHT COLUMN (AVATAR & SYSTEM CARD OVERLAYS) */}
-          <div className="lg:col-span-5 flex justify-center relative select-none">
+          <div className="lg:col-span-5 flex flex-col justify-center relative select-none">
             
             {/* Animated Target Rings behind profile */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -135,55 +136,59 @@ function Hero() {
               <div className="absolute w-[220px] h-[220px] md:w-[280px] md:h-[280px] rounded-full border border-cyber-red/10" />
             </div>
 
-            {/* Profile Avatar Box */}
-            <div className="relative w-[280px] h-[340px] md:w-[360px] md:h-[440px] rounded-3xl overflow-hidden border border-cyber-border bg-gradient-to-t from-cyber-red/20 to-transparent p-[1px] shadow-[0_0_40px_rgba(255,0,60,0.15)] shadow-glow-red">
-              <img
-                src="/sanjai.png"
-                alt="Sanjai S"
-                className="w-full h-full object-cover rounded-3xl"
-              />
+            {/* Profile Avatar Box Wrapper */}
+            <div className="flex flex-col items-center w-full relative z-10">
+              <div className="relative w-[280px] h-[340px] md:w-[360px] md:h-[440px] rounded-3xl overflow-hidden border border-cyber-border bg-gradient-to-t from-cyber-red/20 to-transparent p-[1px] shadow-[0_0_40px_rgba(255,0,60,0.15)] shadow-glow-red">
+                <img
+                  src="/sanjai.png"
+                  alt="Sanjai S"
+                  className="w-full h-full object-cover rounded-3xl"
+                />
 
-              {/* Lower Overlay Card on Image */}
-              <div className="absolute bottom-4 left-4 right-4 bg-black/70 backdrop-blur-md border border-cyber-border rounded-xl p-3.5 flex items-center justify-between">
-                <div className="text-left font-mono">
-                  <p className="text-[10px] text-gray-400 font-bold tracking-wider">PREDICTING TODAY</p>
-                  <p className="text-[10px] text-cyber-red font-bold tracking-wider">POWERING TOMORROW</p>
-                </div>
-                {/* Audio Wave Equalizer Visualizer */}
-                <div className="flex items-end gap-[3px] h-6">
-                  {[...Array(6)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-[3px] h-full bg-cyber-red rounded-t animate-equalizer"
-                      style={{
-                        animationDelay: `${i * 0.15}s`,
-                        animationDuration: `${0.6 + i * 0.1}s`
-                      }}
-                    />
-                  ))}
+                {/* Lower Overlay Card on Image */}
+                <div className="absolute bottom-4 left-4 right-4 bg-black/70 backdrop-blur-md border border-cyber-border rounded-xl p-3.5 flex items-center justify-between">
+                  <div className="text-left font-mono">
+                    <p className="text-[10px] text-gray-400 font-bold tracking-wider">PREDICTING TODAY</p>
+                    <p className="text-[10px] text-cyber-red font-bold tracking-wider">POWERING TOMORROW</p>
+                  </div>
+                  {/* Audio Wave Equalizer Visualizer */}
+                  <div className="flex items-end gap-[3px] h-6">
+                    {[...Array(6)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="w-[3px] h-full bg-cyber-red rounded-t animate-equalizer"
+                        style={{
+                          animationDelay: `${i * 0.15}s`,
+                          animationDuration: `${0.6 + i * 0.1}s`
+                        }}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Float Forecast Telemetry Card on Right */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
-  <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
-    <p className="text-xs text-gray-400 font-mono">Projects Built</p>
-    <h3 className="text-2xl font-black text-cyber-red">12</h3>
-  </div>
-  <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
-    <p className="text-xs text-gray-400 font-mono">GitHub Contributions</p>
-    <h3 className="text-2xl font-black text-cyber-red">1.4k</h3>
-  </div>
-  <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
-    <p className="text-xs text-gray-400 font-mono">Certifications</p>
-    <h3 className="text-2xl font-black text-cyber-red">5</h3>
-  </div>
-  <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
-    <p className="text-xs text-gray-400 font-mono">Problems Solved</p>
-    <h3 className="text-2xl font-black text-cyber-red">250+</h3>
-  </div>
-</div>
+            {/* Float Forecast Telemetry Card below profile picture */}
+            <div className="mt-8 relative z-10 bg-cyber-card/40 border border-cyber-border rounded-2xl p-4 backdrop-blur-sm">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
+                  <p className="text-xs text-gray-400 font-mono">Projects Built</p>
+                  <h3 className="text-2xl font-black text-cyber-red">5</h3>
+                </div>
+                <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
+                  <p className="text-xs text-gray-400 font-mono">GitHub Contributions</p>
+                  <h3 className="text-2xl font-black text-cyber-red">100</h3>
+                </div>
+                <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
+                  <p className="text-xs text-gray-400 font-mono">Certifications</p>
+                  <h3 className="text-2xl font-black text-cyber-red">7</h3>
+                </div>
+                <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
+                  <p className="text-xs text-gray-400 font-mono">Problems Solved</p>
+                  <h3 className="text-2xl font-black text-cyber-red">150+</h3>
+                </div>
+              </div>
+
               {/* Mini Sparkline Chart SVG */}
               <svg className="w-full h-8 my-2 stroke-cyber-red fill-none" viewBox="0 0 100 30">
                 <path
@@ -321,7 +326,7 @@ function Hero() {
               </div>
               <div className="bg-black/35 border border-cyber-border/40 rounded-xl p-2.5">
                 <span className="text-xs text-gray-500 block uppercase">Latency</span>
-                <span className="text-sm font-black text-white">{"< 45ms"}</span>
+                <span className="text-sm font-black text-white">&lt; 45ms</span>
               </div>
               <div className="bg-black/35 border border-cyber-border/40 rounded-xl p-2.5">
                 <span className="text-xs text-gray-500 block uppercase">Epochs</span>
