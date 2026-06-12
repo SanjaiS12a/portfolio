@@ -1,8 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import Typed from "typed.js";
+import { FaGithub, FaLinkedin, FaEnvelope, FaChevronRight } from "react-icons/fa";
+import { Activity, Database, Cpu, TrendingUp, Sparkles, ShieldCheck } from "lucide-react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaChevronRight } from "react-icons/fa";
 import { Activity, Database, Cpu, TrendingUp, Sparkles, ShieldCheck } from "lucide-react";
 
 function Hero() {
+  const typedRef = useRef(null);
+  useEffect(() => {
+    const options = {
+      strings: ["AI Engineer", "ML Developer", "Data Analyst", "Full Stack Developer"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true,
+    };
+    const typed = new Typed(typedRef.current, options);
+    return () => typed.destroy();
+  }, []);
+
   const [liveUsage, setLiveUsage] = useState(782.4);
   const [efficiency, setEfficiency] = useState(18.6);
   const [barHeights, setBarHeights] = useState([
@@ -71,9 +86,7 @@ function Hero() {
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white mb-2">
                 SANJAI S
               </h1>
-              <h2 className="text-2xl md:text-4xl font-extrabold text-cyber-red tracking-wide text-glow-red">
-                AI & ML STUDENT
-              </h2>
+              <h2 className="text-2xl md:text-4xl font-extrabold text-cyber-red tracking-wide text-glow-red"><span ref={typedRef}></span></h2>
             </div>
 
             {/* Description */}
@@ -153,14 +166,24 @@ function Hero() {
             </div>
 
             {/* Float Forecast Telemetry Card on Right */}
-            <div className="absolute -right-2 md:-right-6 top-8 bg-black/85 backdrop-blur-md border border-cyber-border rounded-xl p-4 w-48 shadow-glow-red hover:border-cyber-red/40 transition-all duration-300">
-              <div className="flex items-center justify-between border-b border-cyber-border pb-1.5 mb-2">
-                <p className="text-[9px] text-gray-400 font-mono">AI FORECAST SYSTEM</p>
-                <span className="w-1.5 h-1.5 rounded-full bg-cyber-red animate-pulse" />
-              </div>
-              <p className="text-[10px] text-gray-500 font-mono">Accuracy</p>
-              <h3 className="text-2xl text-cyber-red font-black font-mono tracking-tighter">94.7%</h3>
-              
+            <div className="grid grid-cols-2 gap-4 mt-8">
+  <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
+    <p className="text-xs text-gray-400 font-mono">Projects Built</p>
+    <h3 className="text-2xl font-black text-cyber-red">12</h3>
+  </div>
+  <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
+    <p className="text-xs text-gray-400 font-mono">GitHub Contributions</p>
+    <h3 className="text-2xl font-black text-cyber-red">1.4k</h3>
+  </div>
+  <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
+    <p className="text-xs text-gray-400 font-mono">Certifications</p>
+    <h3 className="text-2xl font-black text-cyber-red">5</h3>
+  </div>
+  <div className="bg-cyber-card/60 backdrop-blur-md border border-cyber-border rounded-xl p-4 text-center">
+    <p className="text-xs text-gray-400 font-mono">Problems Solved</p>
+    <h3 className="text-2xl font-black text-cyber-red">250+</h3>
+  </div>
+</div>
               {/* Mini Sparkline Chart SVG */}
               <svg className="w-full h-8 my-2 stroke-cyber-red fill-none" viewBox="0 0 100 30">
                 <path
