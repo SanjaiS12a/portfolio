@@ -286,7 +286,7 @@ function Hero() {
               </div>
               <div>
                 <h4 className="text-xs font-bold tracking-wider font-mono">MODEL TELEMETRY</h4>
-                <p className="text-[9px] text-gray-500 font-mono">Healthcare LLM Performance</p>
+                <p className="text-[9px] text-gray-500 font-mono">Water Consumption Prediction</p>
               </div>
             </div>
 
@@ -294,7 +294,7 @@ function Hero() {
             <div className="grid grid-cols-2 gap-3 font-mono text-center my-2">
               <div className="bg-black/35 border border-cyber-border/40 rounded-xl p-2.5">
                 <span className="text-xs text-gray-500 block uppercase">Accuracy</span>
-                <span className="text-sm font-black text-cyber-red text-glow-red">96.2%</span>
+                <span className="text-sm font-black text-cyber-red text-glow-red">86.2%</span>
               </div>
               <div className="bg-black/35 border border-cyber-border/40 rounded-xl p-2.5">
                 <span className="text-xs text-gray-500 block uppercase">Latency</span>
